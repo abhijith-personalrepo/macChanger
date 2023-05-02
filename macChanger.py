@@ -14,8 +14,19 @@ interface = options.interface
 newMac = options.newMac
 if not interface:
     interface = str(input("Input the interface name: "))
-#MAC addr filter
+#MAC addr filter re
 pattern = r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$'
+
+#Obtaining initial MAC address from ifconfig command
+result = subprocess.run(["ifconfig", interface], capture_output=True, text=True)
+mac_address = re.search(r"ether\s+([0-9a-fA-F]{2}(?::[0-9a-fA-F]{2}){5})", result.stdout)
+if mac_address:
+    mac_address = mac_address.group(1)
+    print("[+] Current MAC address of device " +interface+ " is :  "+mac_address )
+else:
+    print("[-] Error: ", result.stderr)
+
+
 if(interface=='eth0' or interface=='wlan0'):
     print("*" *80)
     print("[+] Changing MAC address for " + interface)
