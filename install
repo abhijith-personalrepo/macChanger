@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Move the "macChanger" file to /usr/local/bin
+sudo mv macChanger /usr/local/bin/
+
+# Make the "macChanger" file executable
+sudo chmod +x /usr/local/bin/macChanger
+
