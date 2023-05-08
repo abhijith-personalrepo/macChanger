@@ -57,3 +57,4 @@ if(interface=='eth0' or interface=='wlan0'):
         print("[-] Invalid MAC address (invalid characters or format): ", newMac)
 else: 
     print("[-] Invalid interface identifier")
+    sys.exit("Exiting program: Invalid interface entered.") # Exit the program with an error message

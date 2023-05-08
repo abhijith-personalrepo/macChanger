@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
+#!/bin/bash
 
-import os
-os.system('python3 macChanger.py')
+# get full path of macChanger.py
+path=$(realpath macChanger.py)
+
+# run macChanger.py
+python3 $path
