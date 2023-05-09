@@ -27,13 +27,12 @@ else:
     print("[-] Error: ", result.stderr)
 
 
-if(interface=='eth0' or interface=='wlan0'):
+if("interface" in result ):
     print("*" *80)
     print("[+] Changing MAC address for " + interface)
     if not newMac:
         newMac = input("Enter the new mac address: ")
     if re.match(pattern, newMac):
-        if newMac[1] in ['0', 'A/a', '2', 'E/e']:
             print("[+] "+newMac+" is valid")
             print("*" *80)
             #executing commands in terminal
@@ -51,8 +50,6 @@ if(interface=='eth0' or interface=='wlan0'):
                 print("[-] Error: ", result.stderr)
 
             print("*" *80)
-        else:
-            print("[-] Second character is not 0, a, 2, or e. Please try again.")
     else:
         print("[-] Invalid MAC address (invalid characters or format): ", newMac)
 else: 
