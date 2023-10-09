@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Move the "macChanger" file to /usr/local/bin
-sudo cp macChanger /usr/local/bin/
-sudo cp macChanger.py /usr/local/bin
+sudo cp macChanger /usr/bin/
+sudo cp macChanger.py /usr/bin
 
 # Make the "macChanger" file executable
-sudo chmod +x /usr/local/bin/macChanger
+sudo chmod +x /usr/bin/macChanger
 
