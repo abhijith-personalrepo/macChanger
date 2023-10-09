@@ -28,11 +28,7 @@ git clone https://github.com/abhijith-personalrepo/macChanger
 cd  macChanger
 python3 macChanger.py --interface eth0 --macAddress 12:34:56:78:90:ab
 ```
-```bash
-git clone https://github.com/abhijith-personalrepo/macChanger
-cd  macChanger
-python3 macChanger.py -i eth0 -m 12:34:56:78:90:ab
-```
+
 OR: To directly install macChanger to terminal run the following (running macChanger directly from the terminal using the command macChanger will not support passing parameters as arguments)
 
 ```bash
